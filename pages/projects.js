@@ -1,62 +1,42 @@
 import Head from 'next/head';
-import Link from 'next/link';
+import Layout from '../components/layout';
 import styles from '../styles/Home.module.css';
-
-export default function Home() {
+export default function Projects() {
   return (
-    <div className={styles.container}>
+    <Layout>
       <Head>
-        <title>SURAJ KUMAR YADAV</title>
+        <title>Projects</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <main>
-        <p className={styles.title}>
-        नमस्कार! 🙏🏼
-        </p>
+        <h2 className={styles.title}>
+        Projects
+        </h2>
 
         <div className={styles.grid}>
-          <Link href="/about" className={styles.card}>
-            <h3>About me &rarr;</h3>
+          <a href="https://itsmyyoutube.netlify.app/" target="_blank" className={styles.card}>
+            <h3>Youtube Clone &rarr;</h3>
             <p>Get to know little more about me.</p>
-          </Link>
+          </a>
 
-          <Link href="/experience" className={styles.card}>
-            <h3>Experience &rarr;</h3>
-            <p>Have a one but worthy one.</p>
-          </Link>
+          <a href="https://itsmyyoutube.netlify.app/" target="_blank" className={styles.card}>
+            <h3>TVmazeshow &rarr;</h3>
+            <p>Have a little but worthy one.</p>
+          </a>
 
-          <Link
-            href="/projects"
-            className={styles.card}
-          >
-            <h3>Projects &rarr;</h3>
-            <p>You are so excited to see this 😉 </p>
-          </Link>
+          <a href="https://tallyproducts.netlify.app/" target="_blank" className={styles.card}>
+            <h3>Tally Products &rarr;</h3>
+            <p>You are so interested to see this 😉 </p>
+          </a>
 
-          <Link
-            href="/skills"
-            className={styles.card}
-          >
-            <h3>Skills &rarr;</h3>
+          <a href="https://8qq97g.csb.app/" target="_blank" className={styles.card}>
+            <h3>Notion Clone &rarr;</h3>
             <p>
               Working on it.
             </p>
-          </Link>
+          </a>
         </div>
       </main>
-
-      {/* <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
-        </a>
-      </footer> */}
-
       <style jsx>{`
         main {
           padding: 5rem 0;
@@ -107,6 +87,6 @@ export default function Home() {
           box-sizing: border-box;
         }
       `}</style>
-    </div>
-  )
+    </Layout>
+  );
 }

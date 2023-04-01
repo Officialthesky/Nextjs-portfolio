@@ -1,62 +1,31 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Layout from '../components/layout';
+import utilStyles from '../styles/utils.module.css';
 import styles from '../styles/Home.module.css';
-
-export default function Home() {
+export default function Experience() {
   return (
-    <div className={styles.container}>
+         <Layout> 
       <Head>
-        <title>SURAJ KUMAR YADAV</title>
+        <title>Experience</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <main>
-        <p className={styles.title}>
-        नमस्कार! 🙏🏼
-        </p>
-
         <div className={styles.grid}>
-          <Link href="/about" className={styles.card}>
-            <h3>About me &rarr;</h3>
-            <p>Get to know little more about me.</p>
-          </Link>
-
-          <Link href="/experience" className={styles.card}>
-            <h3>Experience &rarr;</h3>
-            <p>Have a one but worthy one.</p>
-          </Link>
-
-          <Link
-            href="/projects"
-            className={styles.card}
-          >
-            <h3>Projects &rarr;</h3>
-            <p>You are so excited to see this 😉 </p>
-          </Link>
-
-          <Link
-            href="/skills"
-            className={styles.card}
-          >
-            <h3>Skills &rarr;</h3>
-            <p>
-              Working on it.
-            </p>
-          </Link>
+          <div className={styles.card}>
+            <div style={{width:'800px'}}>
+            <h3>Frontend Developer at Riggle {'     '} <span className={styles.paragraph}>(Jun 2022 - Present)</span></h3>
+            <ul className={utilStyles.list}>
+            <li className={utilStyles.listItem}>Collaborating closely with co-founders, backend team, and design team to successfully deliver projects.</li>
+            <li className={utilStyles.listItem}>Building and maintaining three webapps - the company landing page, Admin Panel, and web version of the company's mobile app.</li>
+            <li className={utilStyles.listItem}>Working with the existing codebase of the Admin panel written in class functions, AntD, and SCSS.
+            </li>
+            <li className={utilStyles.listItem}>Achieving search engine rankings for the company website without the aid of an SEO specialist.</li>
+            </ul>
+            </div>
+          </div>
         </div>
       </main>
-
-      {/* <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
-        </a>
-      </footer> */}
-
       <style jsx>{`
         main {
           padding: 5rem 0;
@@ -107,6 +76,6 @@ export default function Home() {
           box-sizing: border-box;
         }
       `}</style>
-    </div>
-  )
+    </Layout>
+  );
 }
